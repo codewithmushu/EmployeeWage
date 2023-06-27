@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeeWage
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Employee employee = new Employee("ABC Company", 25, 22, 120);
+
+            Console.WriteLine("1. Check Employee Attendance");
+            Console.Write("Enter your choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    employee.CheckEmployeeAttendance();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+            }
+        }
+    }
+}
