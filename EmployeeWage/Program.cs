@@ -13,6 +13,7 @@ namespace EmployeeWage
             Employee employee = new Employee("ABC Company", 25, 22, 120);
 
             Console.WriteLine("1. Check Employee Attendance");
+            Console.WriteLine("2. Calculate Daily Employee Wage");
             Console.Write("Enter your choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
@@ -20,6 +21,9 @@ namespace EmployeeWage
             {
                 case 1:
                     employee.CheckEmployeeAttendance();
+                    break;
+                case 2:
+                    employee.CalculateDailyEmployeeWage();
                     break;
                 default:
                     Console.WriteLine("Invalid choice");

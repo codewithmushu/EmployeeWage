@@ -42,5 +42,24 @@ namespace EmployeeWage
                     break;
             }
         }
+
+        public void CalculateDailyEmployeeWage()
+        {
+            int dailyWage = 0;
+            Random random = new Random();
+            int attendance = random.Next(0, 2); // Generate 0 or 1
+
+            switch (attendance)
+            {
+                case 0:
+                    dailyWage = 0;
+                    break;
+                case 1:
+                    dailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
+                    break;
+            }
+
+            Console.WriteLine("Daily Employee Wage: $" + dailyWage);
+        }
     }
 }
