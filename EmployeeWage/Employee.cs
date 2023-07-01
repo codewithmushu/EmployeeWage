@@ -61,5 +61,13 @@ namespace EmployeeWage
 
             Console.WriteLine("Daily Employee Wage: $" + dailyWage);
         }
+
+        public void AddPartTimeEmployeeAndWage()
+        {
+            int dailyWage = WAGE_PER_HOUR * PART_TIME_HOURS;
+            Console.WriteLine("Part-time Employee Added");
+            Console.WriteLine("Daily Wage: $" + dailyWage);
+        }
+
     }
 }
